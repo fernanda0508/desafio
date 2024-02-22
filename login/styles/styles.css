@@ -1,25 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #EEEEEE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    margin: 0;
-    background-image: url('../img/imgvingadores.jpg');
-    background-size: cover;  /*Ajusta o tamanho da imagem para cobrir toda a área do corpo */
-    background-position: center;   /* Centraliza a imagem no corpo */
-    background-repeat: no-repeat;
-  }
-  
-  .form-container {
-    background: white;
-    padding: 85px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(62, 63, 62, 0.224);
-  }
-  
-  form h2 {
+  background-image: url('../img/imgvingadores.jpg');
+  background-size: auto; /* Isso permite que a imagem mantenha seu tamanho original */
+  background-repeat: repeat; /* Faz com que a imagem se repita */
+  background-position: center; /* Centraliza a imagem */
+}
+  /* form h2 {
     text-align: center;
     font-size: 35px;
     margin-bottom: 10%;
@@ -49,7 +34,7 @@ body {
     box-sizing: border-box;
   
     border-color: #E2E2E2; /* Borda cinza mais escura */
-    color: #FFFF;
+    /* color: #FFFF;
     
   }
   
@@ -68,4 +53,4 @@ body {
   
   button:hover {
     background-color: #2a2c2adc;
-  }
+  } */ */
