@@ -72,8 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>${disciplinaAtual.cargaHorariaSemestral}</td>
                             <td>${disciplinaAtual.turno}</td>
                             <td>${disciplinaAtual.area}</td>
+                            <td><button type="button" class="btn btn-danger remove-btn">Excluir</button></td>
                         </tr>`;
             selectedTableBody.innerHTML += row;
+            attachRemoveEventListeners();
+
+            function attachRemoveEventListeners() {
+                document.querySelectorAll('.remove-btn').forEach(button => {
+                    button.addEventListener('click', function () {
+                        // Remove a linha da tabela
+                        this.closest('tr').remove();
+                    });
+                });
+            }
 
             // Preparar os dados para envio
             const disciplinasParaEnviar = Array.from(document.querySelectorAll('#selectedDisciplinas tr')).map(tr => {
@@ -89,13 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             disciplinaAtual = null;
 
-            document.getElementById('saveAreaPreference').addEventListener('click', function () {
-                const selectedArea = document.getElementById('areaFilter').value;
-                localStorage.setItem('userAreaPreference', selectedArea);
+            // document.getElementById('saveAreaPreference').addEventListener('click', function () {
+            //     const selectedArea = document.getElementById('areaFilter').value;
+            //     localStorage.setItem('userAreaPreference', selectedArea);
 
-                // Redirecionar para a página principal
-                window.location.href = '/preferencias/index.html';
-            });
+            //     // Redirecionar para a página principal
+            //     window.location.href = '/preferencias/index.html';
+            // });
 
         }
     });
