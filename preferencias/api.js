@@ -1,14 +1,15 @@
 // Array de objetos representando as disciplinas fictícias.
 const fakeDisciplinas = [
-    { nome: "Programação I", cargaHoraria: 5, cargaHorariaSemestral: 40, turno: "Noturno" },
-    { nome: "Banco de Dados I", cargaHoraria: 7, cargaHorariaSemestral: 60, turno: "Noturno" },
-    { nome: "Engenharia de Software", cargaHoraria: 4, cargaHorariaSemestral: 40, turno: "Matutino" },
-    { nome: "Redes de Computadores", cargaHoraria: 4, cargaHorariaSemestral: 44, turno: "Vespertino" },
-    { nome: "Desenvolvimento Web", cargaHoraria: 4, cargaHorariaSemestral: 40, turno: "Matutino" },
-    { nome: "Inteligência Artificial", cargaHoraria: 2, cargaHorariaSemestral: 30, turno: "Matutino" },
-    { nome: "Segurança da Informação", cargaHoraria: 2, cargaHorariaSemestral: 30, turno: "Vespertino" },
-    { nome: "Computação Gráfica", cargaHoraria: 2, cargaHorariaSemestral: 30, turno: "Noturno" }
+    { nome: "Programação I", cargaHoraria: 5, cargaHorariaSemestral: 40, turno: "Noturno", area: "Desenvolvimento" },
+    { nome: "Banco de Dados I", cargaHoraria: 7, cargaHorariaSemestral: 60, turno: "Noturno", area: "Desenvolvimento" },
+    { nome: "Engenharia de Software", cargaHoraria: 4, cargaHorariaSemestral: 40, turno: "Matutino", area: "Análise" },
+    { nome: "Redes de Computadores", cargaHoraria: 4, cargaHorariaSemestral: 44, turno: "Vespertino", area: "Hardware" },
+    { nome: "Desenvolvimento Web", cargaHoraria: 4, cargaHorariaSemestral: 40, turno: "Matutino", area: "Desenvolvimento" },
+    { nome: "Inteligência Artificial", cargaHoraria: 2, cargaHorariaSemestral: 30, turno: "Matutino", area: "Desenvolvimento" },
+    { nome: "Segurança da Informação", cargaHoraria: 2, cargaHorariaSemestral: 30, turno: "Vespertino", area: "Hardware" },
+    { nome: "Computação Gráfica", cargaHoraria: 2, cargaHorariaSemestral: 30, turno: "Noturno", area: "Hardware" }
 ];
+
 
 // Variável para armazenar temporariamente a disciplina selecionada pelo usuário.
 let disciplinaAtual = null;
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>${disciplina.cargaHoraria}</td>
                         <td>${disciplina.cargaHorariaSemestral}</td>
                         <td>${disciplina.turno}</td>
+                        <td>${disciplina.area}</td>
                         <td><button type="button" class="btn btn-primary select-btn" data-bs-toggle="modal" data-bs-target="#myModal" data-id="${index}">Selecionar</button></td>
                     </tr>`;
         tableBody.innerHTML += row;
@@ -65,10 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Cria uma nova linha na tabela de disciplinas selecionadas.
             const row = `<tr>
                             <th scope="row">${selectedTableBody.children.length + 1}</th>
-                            <td>${disciplinaAtual.nome}</td>
+                            <td>${disciplinaAtual.nome}</td>                  
                             <td>${disciplinaAtual.cargaHoraria}</td>
                             <td>${disciplinaAtual.cargaHorariaSemestral}</td>
                             <td>${disciplinaAtual.turno}</td>
+                            <td>${disciplinaAtual.area}</td>
                         </tr>`;
             selectedTableBody.innerHTML += row;
 
@@ -85,6 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('disciplinasSelecionadas').value = JSON.stringify(disciplinasParaEnviar);
 
             disciplinaAtual = null;
+
+            document.getElementById('saveAreaPreference').addEventListener('click', function () {
+                const selectedArea = document.getElementById('areaFilter').value;
+                localStorage.setItem('userAreaPreference', selectedArea);
+
+                // Redirecionar para a página principal
+                window.location.href = '/preferencias/index.html';
+            });
+
         }
     });
 });
