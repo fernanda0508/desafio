@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta name="author" content="">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+
+  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+    <!-- Navegaçao principal-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="#">DisciPlan</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Itens Laterais -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-home"></i>
+              <span class="nav-link-text">Principal</span>
+            </a>
+          </li>
+
+          <!-- Itens Laterais -->
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-user"></i>
+              <span class="nav-link-text">Professor</span>
+            </a>
+          </li>
+
+          <!-- Itens Laterais -->
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="/preferencias/index.html">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">Preferencias</span>
+            </a>
+          </li>
+
+          <!-- Itens Laterais -->
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+              data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-book"></i>
+              <span class="nav-link-text">Cursos</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseComponents">
+              <li>
+                <a href="navbar.html">ALGO</a>
+              </li>
+              <li>
+                <a href="cards.html">ALGO 2</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Itens Laterais -->
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+              data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-wrench"></i>
+              <span class="nav-link-text">Relatorios</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseMulti">
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        </li>
+        </ul>
+
+
+        <!--Botão sair  -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-fw fa-sign-out"></i>Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js'></script>
+    <script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap4.js'></script>
+    <script src="./script.js"></script>
