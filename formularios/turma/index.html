@@ -114,17 +114,19 @@
                 <div class="col-md-6 mb-3">
                   <label for="area" class="form-label">Período atual</label>
                   
-                  <select class="form-select" id="turno" name="periodoAtual">
-                    <option value="" disabled selected hidden>Selecione o turno</option>
-                    <option value="integral">1º Período</option>
-                    <option value="integral">2º Período</option>
-                    <option value="integral">3º Período</option>
-                    <option value="integral">4º Período</option>
-                    <option value="integral">5º Período</option>
-                    <option value="integral">6º Período</option>
-                    <option value="integral">7º Período</option>
-                    <option value="integral">8º Período</option>
-                    <option value="integral">9º Período</option> 
+                  <select class="form-select" id="Periodo_Atual" name="Periodo_Atual">
+                    <option value="" disabled selected hidden>Selecione o Período</option>
+                    <option value="1º Período">1º Período</option>
+                    <option value="2º Período">2º Período</option>
+                    <option value="3º Período">3º Período</option>
+                    <option value="4º Período">4º Período</option>
+                    <option value="5º Período">5º Período</option>
+                    <option value="6º Período">6º Período</option>
+                    <option value="7º Período">7º Período</option>
+                    <option value="8º Período">8º Período</option>
+                    <option value="1º Ano">1º Ano</option>
+                    <option value="2º Ano">2º Ano</option> 
+                    <option value="3º Ano">3º Ano</option> 
                                       
                   </select>
                 
@@ -146,29 +148,43 @@
 
                 <div class="col-md-6 mb-3">
                   <label for="semestre" class="form-label">Inicio do Semestre</label>
-                  <input type="date" class="form-control" id="iniciosemestre" name="iniciosemestre">
+                  <input type="date" class="form-control" id="inicioSemestre" name="inicioSemestre">
                 
                 </div>
-                <div class="col-md-6 mb-3">
-                  <label for="cargaHoraria" class="form-label">Carga Horária Semanal da Turma</label>
-                  <input type="number" class="form-control" id="cargaHoraria" name="cargaHoraria">
-                </div>
+                
               </div>
+
               <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cargaHorariaSemanal" class="form-label">Carga Horária Semanal</label>
+                  <select class="form-select" id="Carga_Horaria_Semanal" name="Carga_Horaria_Semanal">
+                    <option value="" disabled selected hidden>Selecione</option>
+                    <option value="05">06</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="20">30</option>
+                    <option value="20">40</option>
+                  
+                  </select>
+                </div>
+              
                 <div class="col-md-6 mb-3">
                   <label for="dataInicio" class="form-label">Fim do Semestre</label>
                   <input type="date" class="form-control" id="dataInicio" name="dataInicio">
                 </div>
-                <div class="col-md-6 mb-3">
-                  <label for="disciplinas" class="form-label">Disciplinas</label> <br>
-                  <a href="https://191.217.158.179:4443/semestre/formularios/turma_disciplina/">Incluir disciplinas em turmas</a>
+              <div class="row">
+                <div class="col-md-6 mb-3" style="text-align: center;">
+                  <br><a class="btn btn-outline-dark" href="https://191.217.158.179:4443/semestre/formularios/turma_disciplina/">Incluir disciplinas</a></br>
+                </div> 
 
+                <div class="col-md-6 mb-3" style="text-align: center;">
+                  <br><button type="submit" class="btn btn-dark">Cadastrar</button></br>
                 </div>
               </div>
+              
               </div>
-              <div class="col-md-6 mb-3" style="text-align: center;">
-                <br><button type="submit" class="btn btn-dark">Cadastrar</button></br>
-              </div>
+              
             </form>
           </div>
         </div>
