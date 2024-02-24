@@ -9,7 +9,7 @@ body {
 }
 
 .card-header, .card-footer {
-  background-color: #E2E2E2; /* Cinza mais escuro para cabeçalho e rodapé do cartão */
+  /* background-color: #E2E2E2; Cinza mais escuro para cabeçalho e rodapé do cartão */
   color: #292929; /* Texto preto */
 }
 
