@@ -89,6 +89,7 @@
   </div>
 </div>
 <!-- Fim cards--> 
+
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -100,7 +101,7 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="nome" class="form-label">Nome da Turma</label>
-                  <select class="form-select" id="curso" name="curso">
+                  <select class="form-select" id="curso" name="FK_Turma">
                     <option value="" disabled selected hidden>Selecione o turno</option>
                     <option value="ADS">ADS</option>
                     <option value="MSI">MSI</option>
@@ -110,9 +111,9 @@
                  
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="area" class="form-label">Período atual</label>
+                  <label for="area" class="form-label">Disciplina</label>
                   
-                  <select class="form-select" id="turno" name="turno">
+                  <select class="form-select" id="FK_Disciplina" name="FK_Disciplina">
                     <option value="" disabled selected hidden>Selecione a disciplina</option>
                     <option value="Lógica de Programação">Lógica de Programação</option>                    
                     <option value="Sistemas Operacionais">Sistemas Operacionais</option>
@@ -126,7 +127,7 @@
               </div>
               <div class="row">
               
-              <button type="submit" class="btn btn-dark">Cadastrar</button>
+              <button type="submit" name="submit" class="btn btn-dark">Cadastrar</button>
             </form>
           </div>
         </div>

@@ -7,26 +7,33 @@ include('/var/www/html/semestre/classes/conect.php');
 	{
 	// os comandos abaixo servem para testar se o html está escrevendo o envio de dados na tela//    
   
- 
-    print_r($_POST['FK_Disciplina']);
-    print_r($_POST['FK_Turma']);
-    
- 
+  /*
+    print_r($_POST['nomeCurso']);
+    print_r($_POST['Modalidade']);
+    print_r($_POST['Area']);
+    print_r($_POST['Sigla']);    
+  */
    		
 		//os nomes das variáveis abaixo devem ser idênticas com as que estão no banco de dados para envio//
-		$FK_Disciplina = 1; //$_POST['FK_Disciplina'];
-    $FK_Turma = 2; //$_POST['FK_Turma'];
-       
+		$nomeCurso = $_POST['nomeCurso'];
+    $Modalidade = $_POST['Modalidade'];
+    $Area = $_POST['Area'];
+    $Sigla = $_POST['Sigla'];  
+    
 		
 		//comando que chama a variável criada no arquivo de conexão "$link" do bd e insere os dados na tabela indicada como nome de "controle" existente no banco de dados//
 		//os campos não necessariamente precisam estar em ordem com o bd, mas todos devem existir e ter o mesmo nome//
 		$result = mysqli_query($conect, "INSERT INTO 
-    Disciplina_Turma(       
-          FK_Disciplina,
-          FK_Turma) 
+    Curso(       
+          nomeCurso,
+          Modalidade,
+          Area,
+          Sigla) 
     VALUES (              
-            '$FK_Disciplina',
-            '$FK_Turma')");
+            '$nomeCurso',
+            '$Modalidade',
+            '$Area',
+            '$Sigla')");
 		
 
 		if($result) {
