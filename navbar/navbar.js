@@ -1,13 +1,13 @@
 // navbar.js
-$(function () {
-  console.log("navbar.js loaded");
-  $("#navbar-placeholder").load("../../navbar/navbar.html", function (response, status, xhr) {
-    if (status == "error") {
-      console.log("Error loading navbar:", xhr.status, xhr.statusText);
+$(document).ready(function() {
+  $("#navbar-placeholder").load("/navbar/index.html", function(response, status, xhr) {
+    if (status === "error") {
+      console.log("Erro ao carregar o navbar:", xhr.status, xhr.statusText);
+    } else {
+      console.log("Navbar carregado com sucesso!");
     }
   });
 });
-
 
 // Inicio Pag principal
 // Chart.js scripts
