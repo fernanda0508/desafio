@@ -69,7 +69,8 @@ html {
   
   #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     cursor: pointer;
-  }
+    margin-top: -3px;
+      }
   
   #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
     float: right;
