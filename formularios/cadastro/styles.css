@@ -6,9 +6,15 @@ body, html {
 }
 
 body {
-  background-image: url('/login/img/imgCadastro.jpg');
+  background-image: url('/login/img/imgVing22.jpg');
   background-size: cover; /* Faz com que a imagem cubra toda a tela */
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* Estilo para o formulário */
+#form-cadastro {
+  box-shadow: #000000;
+  padding: 20px;
+  border-radius: 30px;
+}
