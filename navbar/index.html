@@ -15,10 +15,11 @@
 <!-- partial:index.partial.html -->
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
 
   <!-- Navegaçao principal-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <img width="40" height="40" src="https://img.icons8.com/office/40/000000/avengers.png" alt="avengers" />
+    <img width="40" height="40" src="https://img.icons8.com/doodle/40/books.png" alt="books" />
     <a class="navbar-brand" href="#" style="font-family: fantasy;
       font-style: italic;
       font-size: 30px;">DisciPlan</a>
@@ -27,6 +28,9 @@
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+
+
     <!-- Itens Laterais -->
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
@@ -36,7 +40,6 @@
             <span class="nav-link-text">Principal</span>
           </a>
         </li>
-
 
         <!-- Itens Laterais -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Professor">
@@ -89,12 +92,33 @@
           </li>
       </li>
       <li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Disciplina">
-        <a class="nav-link" href="/formularios/cursos/index.html">
-          <i class="fa fa-fw fa-graduation-cap"></i>
-          <span class="nav-link-text">Cursos</span>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Curso">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentscurso"
+          data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-book"></i>
+          <span class="nav-link-text">Curso</span>
         </a>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <ul class="sidenav-second-level collapse" id="collapseComponentscurso">
+          <li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="cadastrarCurso">
+            <a class="nav-link" href="/formularios/cursos/index.html">
+              <i class="fa fa-fw fa-plus-square-o"></i>
+              <span class="nav-link-text">Cadastrar Curso</span>
+          </li>
+          </a>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="AtualizarCurso">
+            <a class="nav-link" href="/formularios/cursos/atualizar.html" style="margin-top: -1rem;">
+              <i class="fa fa-fw fa-edit"></i>
+              <span class="nav-link-text">Atualizar Curso</span>
+          </li>
+          </a>
+      </li>
+      </a>
+      </li>
+      </li>
+      </ul>
+
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Disciplina">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentsc"
           data-parent="#exampleAccordion">
           <i class="fa fa-fw fa-book"></i>
@@ -104,13 +128,13 @@
           <li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="cadastrarDisc">
             <a class="nav-link" href="/formularios/disciplina/cadastro/index.html">
-              <i class="fa fa-fw fa-eercast"></i>
+              <i class="fa fa-fw fa-plus-square-o"></i>
               <span class="nav-link-text">Cadastrar Disciplina</span>
           </li>
           </a>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="cadastrarDisc">
-            <a class="nav-link" href="/formularios/prazo_escolha_disciplina/index.html">
-              <i class="fa fa-fw fa-eercast"></i>
+            <a class="nav-link" href="/formularios/prazo_escolha_disciplina/index.html" style="margin-top: -1rem;">
+              <i class="fa fa-fw fa-plus-square-o"></i>
               <span class="nav-link-text">Cadastrar Prazo</span>
           </li>
           </a>
@@ -130,7 +154,7 @@
         </a>
         <ul class="sidenav-second-level collapse" id="collapseComponentsAdm">
           <li>
-            <a href="/administrador/gerenciar_user.html">Gerenciar Usuários</a>
+            <a href="#">Cadastrar Periodo</a>
           </li>
           <li>
             <a href="#">...</a>
@@ -138,22 +162,7 @@
         </ul>
       </li>
 
-      <!-- Itens Laterais -->
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentscursos"
-          data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-book"></i>
-          <span class="nav-link-text">Cursos</span>
-        </a>
-        <ul class="sidenav-second-level collapse" id="collapseComponentscursos">
-          <li>
-            <a href="/formularios/cursos/index.html">Cadastrar</a>
-          </li>
-          <li>
-            <a href="/formularios/cursos/atualizar.html">Atualizar</a>
-          </li>
-        </ul>
-      </li>
+    
       <!-- Itens Laterais -->
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
@@ -166,7 +175,6 @@
             <a href="/relatorio/geral.html">Relatorio Geral</a>
           </li>
           <li>
-
           </li>
         </ul>
       </li>
