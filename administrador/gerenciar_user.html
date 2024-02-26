@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cursos</title>
+  <!-- Incluindo o CSS do Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/style/style.css" rel="stylesheet">
+  <link href="/semestre/navbar/style.css" rel="stylesheet" />
+  <!-- Importando Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="fixed-nav sticky-footer mt-0" id="page-top">
+  <!-- Navbar inicial  -->
+  <div id="navbar-placeholder"></div>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Icon Cards-->
+      <div class="row" style="margin-top: 3rem;">
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fas"></i><img width="120" height="120"
+                  src="https://img.icons8.com/stickers/120/captain-america.png" alt="captain-america" /></i>
+              </div>
+              <div class="mr-5">Data de abertura: DD/MM/AA </div>
+              <div class="mr-5">Data de Final: DD/MM/AA </div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-warning o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw"><img width="120" height="120" src="https://img.icons8.com/doodle/480/iron-man.png"
+                    alt="iron-man" /></i>
+              </div>
+              <div class="mr-5">Escolha bem!!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- Card 03 -->
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white o-hidden h-100" style="background-color: purple;">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw"><img width="120" height="120" src="https://img.icons8.com/color/120/thanos.png"
+                    alt="thanos" /></i>
+              </div>
+              <div class="mr-5">Pense na Opinião da turma!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- Card 04 -->
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw"><img width="120" height="120"
+                    src="https://img.icons8.com/color/120/spiderman-head.png" alt="spiderman-head" /></i>
+              </div>
+              <div class="mr-5">Fique atento ao prazo!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim cards-->
+
+      <div class="container mt-5">
+        <h2>Gerenciamento de Usuários</h2>
+        <div class="mb-3">
+          <button class="btn btn-primary">Adicionar Novo Usuário</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Exemplo de usuários -->
+            <tr>
+              <td>1</td>
+              <td>Maria Silva</td>
+              <td>maria@example.com</td>
+              <td>
+                <button class="btn btn-info btn-sm">Visualizar</button>
+                <button class="btn btn-warning btn-sm">Editar</button>
+                <button class="btn btn-danger btn-sm">Remover</button>
+              </td>
+            </tr>
+            <!-- Repetir para outros usuários -->
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="/semestre/navbar/navbar.js"></script>
+      <!-- Incluindo o JavaScript do Bootstrap 5.3.3 -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
