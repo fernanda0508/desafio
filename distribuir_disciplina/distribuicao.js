@@ -35,10 +35,33 @@ function atribuirDisciplina(disciplina, professor) {
         let linhaAtribuicao = tabelaAtribuicoes.insertRow();
         linhaAtribuicao.insertCell(0).textContent = disciplina.nome;
         linhaAtribuicao.insertCell(1).textContent = professor.nome;
+
+        let celulaAcoes = linhaAtribuicao.insertCell(2);
+        let botaoExcluir = document.createElement('button');
+        botaoExcluir.textContent = 'Excluir';
+        botaoExcluir.className = 'btn btn-danger btn-sm';
+        botaoExcluir.onclick = () => removerAtribuicao(disciplina, professorObj, linhaAtribuicao);
+        celulaAcoes.appendChild(botaoExcluir);
     } else {
         alert('Carga horária excedida para este professor.');
     }
 }
+
+function removerAtribuicao(disciplina, professor, linha) {
+    // Remover a linha da tabela de atribuições
+    linha.remove();
+
+    // Retornar a carga horária ao professor
+    professor.cargaHorariaAtual -= disciplina.cargaHoraria;
+
+    // Retornar a disciplina à lista de disciplinas
+    disciplinas.push(disciplina);
+
+    // Atualizar as tabelas
+    atualizarTabelaDisciplinas();
+    atualizarTabelaProfessores();
+}
+
 
 // Funções para atualizar tabelas
 function atualizarTabelaDisciplinas() {
