@@ -1,0 +1,39 @@
+#welcome-message {
+    margin: 100px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  #welcome-message p {
+    font-size: 80px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: xxx-large;
+    font-family: cursive;
+  }
+  
+  #welcome-message span {
+    animation: oscillate 2s infinite alternate, changeColor 4s infinite;
+  }
+  
+  @keyframes oscillate {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes changeColor {
+    0% {
+      color: #a7a1a1;
+    }
+    50% {
+      color: #656464; /* vermelho */
+    }
+    100% {
+      color: #151515;
+    }
+  }

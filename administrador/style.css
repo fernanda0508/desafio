@@ -1,0 +1,66 @@
+
+.table {
+ border-collapse: separate;
+ border-spacing: 2px 8px; /* Espaçamento vertical entre as linhas */
+ width: 100%;
+}
+
+.table th,
+.table td {
+ padding: 12px;
+ text-align: left;
+ vertical-align: middle;
+ border: 1px solid #dee2e6; /* Cor das bordas */
+}
+
+.table th {
+ background-color: #343a40;
+ color: white;
+}
+
+.table-container {
+ margin-left: 20%; /* Ajuste a margem esquerda conforme necessário */
+ margin-right: 4%;
+ margin-top: 2%;
+ overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se o conteúdo exceder o tamanho mínimo */
+}
+
+/* Bordas redondas para as células da tabela */
+.table th:first-child,
+.table td:first-child {
+ border-top-left-radius: 8px;
+ border-bottom-left-radius: 8px;
+}
+
+.table th:last-child,
+.table td:last-child {
+ border-top-right-radius: 8px;
+ border-bottom-right-radius: 8px;
+}
+ 
+.funcionamento,
+.objetivos,
+.restricao,
+.retorno {
+min-width: 100px; /* Ajuste o valor conforme necessário */
+overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se o conteúdo exceder o tamanho mínimo */
+} 
+
+
+.img img {
+    display: block;
+    margin: 0 auto;
+    
+}
+
+img {
+    max-width: 100%; /* Garante que as imagens sejam responsivas */
+    height: auto;
+  }
+
+  .navbar {
+    z-index: 1000; /* Ou um valor maior do que o z-index do seu conteúdo */
+}
+
+
+

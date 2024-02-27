@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Usuários</title>
+  <!-- Incluindo o CSS do Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/semestre/style/style.css" rel="stylesheet">
+  <link href="/semestre/navbar/style.css" rel="stylesheet" />
+  <!-- Importando Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="fixed-nav sticky-footer mt-0" id="page-top">
+  <!-- Navbar inicial  -->
+  <div id="navbar-placeholder"></div>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="container mt-5">
+        <h2>Gerenciamento de Usuários</h2>
+        <div class="mb-3">
+          <button class="btn btn-primary">Adicionar Novo Usuário</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Os usuários serão inseridos aqui dinamicamente pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/semestre/navbar/navbar.js"></script>
+  <script src="usuarios.js"></script>
+  <!-- Incluindo o JavaScript do Bootstrap 5.3.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

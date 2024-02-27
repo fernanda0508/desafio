@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="/semestre/style.css">
+
+</head>
+
+<!-- partial:index.partial.html -->
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+  <!-- Navegaçao principal-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <img width="40" height="40" src="https://img.icons8.com/doodle/40/books.png" alt="books" />
+    <a class="navbar-brand" href="#" style="font-family: fantasy;
+      font-style: italic;
+      font-size: 30px;">DisciPlan</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <!-- Itens Laterais -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Principal">
+          <a class="nav-link" href="/semestre/principal/index.php">
+            <i class="fa fa-fw fa-home"></i>
+            <span class="nav-link-text">Principal</span>
+          </a>
+        </li>
+
+        <!-- Itens Laterais -->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Professor">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentsprof"
+            data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Professor</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponentsprof">
+            <li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Preferencias">
+              <a class="nav-link" href="/semestre/preferencias/index.php">
+                <i class="fa fa-fw fa fa-book"></i>
+                <span class="nav-link-text">Preferencias</span>
+              </a>
+            </li>
+        </li>
+        <li>
+        
+        </li>
+        <li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Editar Perfil">
+          <a class="nav-link" href="/semestre/formularios/perfil/index.php">
+            <i class="fa fa-fw fa-edit"></i>
+            <span class="nav-link-text">Editar Perfil</span>
+          </a>
+        </li>
+        </li>
+      </ul>
+      </li>
+      <!-- Itens Laterais -->
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentscood"
+          data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-black-tie"></i>
+          <span class="nav-link-text">Coodenador</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseComponentscood">
+          <li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Turma">
+            <a class="nav-link" href="/semestre/formularios/turma/index.php">
+              <i class="fa fa-fw fa-users"></i>
+              <span class="nav-link-text">Turma</span>
+            </a>
+          </li>
+      </li>
+          <li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Turma">
+            <a class="nav-link" href="/semestre/distribuir_disciplina/distribuir.html">
+              <i class="fas fa-chart-bar"></i>
+              <span class="nav-link-text">Distribuir Disciplinas</span>
+            </a>
+          </li>
+      </li>
+      <li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Curso">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentscurso"
+          data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-book"></i>
+          <span class="nav-link-text">Curso</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseComponentscurso">
+          <li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="cadastrarCurso">
+            <a class="nav-link" href="/semestre/formularios/cursos/index.php">
+              <i class="fa fa-fw fa-plus-square-o"></i>
+              <span class="nav-link-text">Cadastrar Curso</span>
+          </li>
+          </a>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="AtualizarCurso">
+            <a class="nav-link" href="/semestre/formularios/cursos/atualizar2.php" style="margin-top: -1rem;">
+              <i class="fa fa-fw fa-edit"></i>
+              <span class="nav-link-text">Atualizar Curso</span>
+          </li>
+          </a>
+      </li>
+      </a>
+      </li>
+      </li>
+      </ul>
+
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Disciplina">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentsc"
+          data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-book"></i>
+          <span class="nav-link-text">Disciplina</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseComponentsc">
+          <li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="cadastrarDisc">
+            <a class="nav-link" href="/semestre/formularios/disciplina/index.php">
+              <i class="fa fa-fw fa-plus-square-o"></i>
+              <span class="nav-link-text">Cadastrar Disciplina</span>
+          </li>
+          </a>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="cadastrarDisc">
+            <a class="nav-link" href="/semestre/formularios/prazo_escolha_disciplina/index.php" style="margin-top: -1rem;">
+              <i class="fa fa-fw fa-plus-square-o"></i>
+              <span class="nav-link-text">Cadastrar Prazo</span>
+          </li>
+          </a>
+      </li>
+      </a>
+      </li>
+      </li>
+      </ul>
+      </li>
+      </ul>
+      <!-- Itens Laterais -->
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponentsAdm"
+          data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-user-secret"></i>
+          <span class="nav-link-text">Administrador</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseComponentsAdm">
+          <li>
+            <a href="/semestre/administrador/gerenciar_user.html">Gerenciar Usuários</a>
+          </li>    
+        </ul>
+      </li>
+
+    
+      <!-- Itens Laterais -->
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+          data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-wrench"></i>
+          <span class="nav-link-text">Relatorios</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseMulti">
+          <li>
+            <a href="/semestre/relatorio/index.php">Relatorio Geral</a>
+          </li>
+          <li>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Itens Laterais -->
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2"
+          data-parent="#exampleAccordion">
+          
+          <span class="nav-link-text">Sobre Nós</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseMulti2">
+          <li>
+            <a href="/semestre/administrador/documentacao.html">Documentação</a>
+          </li>
+          
+        </ul>
+      </li>
+
+
+      </ul>
+      </li>
+      </ul>
+
+
+      <!--Botão sair  -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Sair</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Logout Modal - Span para sair-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">MDS OQUE EU TE FIZ?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Você realmente vai me abandonar?</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>
+          <a class="btn btn-primary" href="/semestre/sair.php">Sim</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js'></script>
+  <script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap4.js'></script>
+  <script src="/semestre/script.js"></script>

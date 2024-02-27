@@ -1,0 +1,35 @@
+body {
+  background-color: #FAF9F6; /* Cinza claro para o fundo */
+  color: #5C5C5C; /* Cor das letras */
+}
+
+.card {
+  border-color: #292929; /* Borda preta */
+  background-color: #FFFFFF; /* Fundo branco para o cartão */
+}
+
+.card-header, .card-footer {
+  background-color: #E2E2E2; /* Cinza mais escuro para cabeçalho e rodapé do cartão */
+  color: #292929; /* Texto preto */
+}
+
+.form-control {
+  background-color: #FFFFFF; /* Cinza claro para campos de entrada */
+  border-color: #E2E2E2; /* Borda cinza mais escura */
+  color: #FFFF; /* Texto cinza para input */
+}
+
+.form-control:focus {
+  border-color: #0365F6; /* Borda vermelha ao focar */
+  box-shadow: #CBDAF0; /* Sombra ao focar */
+}
+
+.btn-primary {
+  background-color: #292929; /* Azul de avisos (secundária) */
+  border-color: #5C5C5C;
+}
+
+.btn-primary:hover {
+  background-color: #353535; /* Azul de avisos (principal) */
+  border-color: #8C8C8C;
+}

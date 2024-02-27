@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Metadados e Links para CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Professor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/semestre/navbar/style.css" rel="stylesheet" />
+</head>
+<!-- 
+    Fluxo do Processo:
+    1- O usuário seleciona disciplinas na primeira tabela.
+    2- As disciplinas selecionadas são adicionadas à segunda tabela.
+    3- Quando o usuário estiver satisfeito com suas seleções, ele clica no botão "Enviar Preferências".
+    4- O botão ativa a submissão do formulário oculto, que envia os dados das disciplinas selecionadas para o servidor PHP.
+   -->
+
+<body>
+  <!-- Navbar inicial  -->
+  <div id="navbar-placeholder"></div>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Icon Cards-->
+      <div class="row" style="margin-top: 4.5rem;">
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fas"></i><img width="120" height="120" src="https://img.icons8.com/stickers/120/captain-america.png" alt="captain-america"/></i>
+              </div>
+              <div class="mr-5 data-abertura" style="margin-right: 4rem !important; font-weight: bold;font-size: 18px;">Data de abertura: </div>
+              <div class="mr-5 data-fechamento" style="margin-right: 4rem !important; font-weight: bold;font-size: 18px;">Data de Final: </div>
+
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-warning o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw"><img width="120" height="120" src="https://img.icons8.com/doodle/480/iron-man.png" alt="iron-man"/></i>
+              </div>
+              <div class="mr-5">Escolha bem!!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- Card 03 -->
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white o-hidden h-100" style="background-color: purple;">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw"><img width="120" height="120" src="https://img.icons8.com/color/120/thanos.png" alt="thanos"/></i>
+              </div>
+              <div class="mr-5">Pense na Opinião da turma!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- Card 04 -->
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw"><img width="120" height="120" src="https://img.icons8.com/color/120/spiderman-head.png" alt="spiderman-head"/></i>
+              </div>
+              <div class="mr-5">Fique atento ao prazo!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Veja Aqui</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim cards-->
+      <!-- Container para a Tabela de Disciplinas Disponíveis -->
+      <div class="container mt-5">
+        <!-- Campo de pesquisa para filtrar as disciplinas -->
+        <div class="d-flex align-items-center">
+          <input class="form-control" style="height: 30px; width: auto; flex-grow: 1;" type="search" name="pesquisa" placeholder="Pesquisar" id="pesquisar">
+          <button onclick="searchData()" class="btn btn-dark" style="height: 30px; margin-left: 5px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="30" fill="currentColor" class="bi bi-search" viewBox="0 7 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+          </button>
+      </div>
+      <br>
+     
+          
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Carga Horária Semanal</th>
+                <th scope="col">Carga Horária Semestral</th>
+                <th scope="col">Turno</th>
+                <th scope="col">Area</th>
+                <th scope="col">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Linhas inseridas dinamicamente -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Disciplinas selecionadas pelo professor -->
+      <div class="container mt-5">
+        <h3>Disciplinas Selecionadas</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Carga Horária Semanal</th>
+                <th scope="col">Carga Horária Semestral</th>
+                <th scope="col">Turno</th>
+                <th scope="col">Área</th>
+                <th scope="col">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="selectedDisciplinas">
+              <!-- As disciplinas selecionadas serão inseridas aqui dinamicamente -->
+            </tbody>
+          </table>
+        </div>
+        <!-- Botão para enviar as disciplinas selecionadas para o servidor PHP -->
+        <button type="button" onclick="document.getElementById('formDisciplinas').submit();" class="btn btn-success">
+          Enviar Preferências
+        </button>
+      </div>
+
+      <!-- Modal para Confirmação da Seleção de Disciplina -->
+      <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmação de Envio</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Tem certeza que deseja selecionar esta disciplina ?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Não
+              </button>
+              <button type="button" class="btn btn-primary" id="confirmSelection" data-bs-dismiss="modal">
+                Sim
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário Oculto para Envio de Dados -->
+      <form id="formDisciplinas" action="seu_script_php.php" method="post" style="display: none">
+        <input type="hidden" name="disciplinasSelecionadas" id="disciplinasSelecionadas" />
+      </form>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Scripts JavaScript -->
+      -
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/semestre/preferencias/api.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="/semestre/navbar/navbar.js"></script>
+</body>
+
+</html>
