@@ -6,13 +6,14 @@ session_start();
 //Comando abaixo para testar se as informações do login estão sendo enviadas;
 //print_r($_REQUEST);
 
+
 if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']))
 {
 	//se os dados existirem no banco, acessará
 	include('/var/www/html/semestre/classes/conect.php');
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
-
+	
 	//prints abaixo para confirmar se estão ok os envios de email e senha registrados no formulaŕio de login (index.php)
 	// print_r('email: ' . $email);
 	// print_r('<br>');
@@ -24,8 +25,13 @@ $sql = "SELECT * FROM Professor WHERE Email = '$email' and Senha = '$senha'";
 $result = mysqli_query($conect,$sql);
 	
 //print_r($result);
+	//mysqli_result Object ([current_field] => 0 [field_count] => 12 [lengths] => [num_rows] => 5 [type] => 0 )
 //print_r($sql);
-//print_r($result);
+	//SELECT * FROM Professor WHERE Email = 'erikpmro@gmail.com' and Senha = '123456'
+
+
+
+
 
 if (mysqli_num_rows($result)<1) 
 {
@@ -39,11 +45,22 @@ if (mysqli_num_rows($result)<1)
 	header('Location: index.php');
 }
 else {
-	//print_r("Usuario exite e pode acessar a pagina que está em criação ...");
+	//print_r("Usuario exite e pode acessar a pagina que está em criação ...");	
 	
-	//cria as variáveis para session
-	$_SESSION['email'] = $email;
-	$_SESSION['senha'] = $senha;
+	//percorrer banco para pegar id usuario	
+		while($user_data = mysqli_fetch_assoc($result))
+		{
+			$idProf = $user_data['ID_Professor'];			
+		}
+		//armazen o ide do usuário:
+		$_SESSION['user_id'] = $idProf;	   	
+
+		//echo "O identificado é $idProf";	
+		//print_r($_SESSION);
+		
+		//cria as variáveis para session
+		$_SESSION['email'] = $email;
+		$_SESSION['senha'] = $senha;
 	
 	$Coord = 0;
 	$Prof = 0;
